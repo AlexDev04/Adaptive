@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Food sense</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pc.css">
 </head>
 <body>
 
@@ -11,49 +13,139 @@
 
         <!-- Навигация -->
         <nav>
-            <svg></svg>
-            <section></section>
-            <section></section>
+            <img src="images/icon-logo.svg" width="120px" height="120px">
+            <section>
+                <ul id="navigation">
+                    <li><img src="images/food-icon.svg" height="30px">Tastemakers</li>
+                    <li><img src="images/blog-icon.svg" height="30px">Blog</li>
+                    <li><img src="images/a-list-icon.svg" height="30px">The-A-List</li>
+                    <li><img src="images/camera-icon.svg" height="30px">Contribute</li>
+                    <li><img src="images/a-list-icon.svg" height="30px">About</li>
+                </ul>
+            </section>
+            <section id="joins">
+                <h3>LAST TWEET</h3>
+                <div class="join-btn">
+                    <img src="images/twitter-icon.svg" width="16px" height="13px">
+                    <p>Join the Conversation</p>
+                </div>
+
+                <h3>LET'S BE FRIENDS</h3>
+                <p>For weekly finds, community recommendations, and more, like us on Facebook.</p>
+                <div class="join-btn">
+                    <img src="images/twitter-icon.svg" width="16px" height="13px">
+                    <p>Join the Community</p>
+                </div>
+            </section>
         </nav>
 
-        <!-- Слайдер -->
-        <section>
-            <img>
-            <p></p>
-            <p></p>
-        </section>
+        <!-- Основная часть страницы -->
+        <div id="page">
+            <!-- Слайдер -->
+            <section id="banner">
+                <img src="images/banner.svg" width="100%">
+                <div id="up-div">Share your Foor Sence</div>
+                <div id="down-div">Submit yout favorite recipes, become a contributor, or get interviewed.</div>
+            </section>
 
-        <!-- Ссылки для переходов -->
-        <section>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </section>
+            <!-- Ссылки для переходов -->
+            <section id="slider-links">
+                <div>
+                    <h3>Tastemakers</h3>
+                    <p>Feast your eyes & get reciepes!</p>
+                </div>
+                <div>
+                    <h3>Blog</h3>
+                    <p>News, how-tos, stories, and more</p>
+                </div>
+                <div>
+                    <h3>The-A-List</h3>
+                    <p>Handpicked, absolute favorites</p>
+                </div>
+                <div class="active">
+                    <h3>Contribute</h3>
+                    <p>We want to hear from you!</p>
+                </div>
+            </section>
 
-        <!-- Подписка на рассылку -->
-        <section>
-            <svg></svg>
-            <p></p>
-            <input type="email">
-            <input type="submit">
-        </section>
+            <!-- Подписка на рассылку -->
+            <section id="mail">
+                <div>
+                    <img src="images/mail-icon.svg" width="32" height="26">
+                    <p>Sign up for out newsletter to receive a handpicked selection
+                        of the best stories, recipes, and news, delivered weekly to
+                        your inbox.</p>
+                </div>
+                <div>
+                    <input type="email">
+                    <input type="submit" value="subscribe">
+                </div>
 
-        <!-- Статьи -->
-        <section>
-            <article>
-                <img>
-                <h2></h2>
-                <p></p>
-                <time></time>
-                <a></a>
-            </article>
-        </section>
+            </section>
+
+            <!-- Статьи -->
+            <section id="articles">
+                <article>
+                    <img src="images/article1.svg" width="207" height="143">
+                    <h3>2012’s Best Summer Cookbooks</h3>
+                    <p>With the best of the season coming from “orchards,
+                       farms and gardens,” NPR has put together an impressive
+                       collection of 10 summer cookbooks.</p>
+                    <time datetime="2012-05-23">May 23, 2012/</time>
+                    <a>Read...</a>
+                </article>
+
+                <article>
+                    <img src="images/article2.svg" width="207" height="143">
+                    <h3>How to Make Vegetable Chips</h3>
+                    <p>About a month ago, I ate almost an entire box of kale chips.
+                       My brother and I were visiting our cousin in Brooklyn, and
+                       before a very thoughtfully prepared vagan...</p>
+                    <time datetime="2012-05-17">May 17, 2012/</time>
+                    <a>Read...</a>
+                </article>
+
+                <article>
+                    <img src="images/article3.svg" width="207" height="143">
+                    <h3>Join us on Pinterest!</h3>
+                    <p>If I could curate a cookbook for you, this would be it.</p>
+                    <time datetime="2012-05-16"> May 16, 2012/</time>
+                    <a>Read...</a>
+                </article>
+
+                <article>
+                    <img src="images/article4.svg" width="207" height="143">
+                    <h3>Recipes from a Sunday Supper</h3>
+                    <p>I could not figure out what to do with the delectable
+                       slices of Pear Cake that I brought home from this wonderful
+                       Sunday supper - eat them slowly, a little bit at...</p>
+                    <time datetime="2012-05-17">May 17, 2012/</time>
+                    <a>Read...</a>
+                </article>
+            </section>
+        </div>
+
     </main>
 
+    <hr>
     <!-- Подвал -->
     <footer>
-        <p>Footer</p>
+        <section>
+            <div>
+                <a>Privacy Policy</a>
+                <span></span>
+                <a>Terms of Use</a>
+                <span></span>
+                <a>Contact</a>
+            </div>
+            <p>© 2016 Food Sense, all rights reserved.</p>
+        </section>
+
+        <section>
+            <img src="images/twitter-icon.svg" width="32" height="26">
+            <img src="images/fb-icon.svg" width="16" height="32">
+            <img src="images/rss-icon.svg" width="32" height="32">
+        </section>
     </footer>
 
 </body>
