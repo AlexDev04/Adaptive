@@ -58,11 +58,15 @@
                 z-index: 1;
             }
 
-    #slider-links div {
-        padding: 10px;
+    #articles article {
+        width: 207px;
     }
 
-    hr {
-        margin: 5vw;
+    #slider-links {
+        justify-content: normal;
     }
+        #slider-links div {
+            padding: 10px;
+        }
+
 }

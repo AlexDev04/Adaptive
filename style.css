@@ -1,3 +1,7 @@
+* {
+    font-family: Arial;
+}
+
 main {
     display: flex
 }
@@ -73,6 +77,7 @@ nav {
 
     #slider-links {
         display: flex;
+        justify-content: center;
         color: #34ACA7;
         width: 896px;
         width: 100%;
@@ -98,10 +103,10 @@ nav {
 
     #mail {
         display: flex;
-        margin: 30px;
+        margin: 30px 0;
         font-size: 14px;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
         #mail div{
@@ -111,7 +116,7 @@ nav {
         }
 
             #mail img {
-                margin:  0 15px;
+                margin:  0 15px 0 0;
             }
 
             #mail p {
@@ -119,7 +124,8 @@ nav {
             }
 
             #mail input {
-                margin: 0 15px 0 30px;
+                padding: 1px;
+                margin: 0 0 0 30px;
             }
 
     #articles {
@@ -128,9 +134,6 @@ nav {
         justify-content: space-between;
     }
 
-        #articles article {
-            width: 207px;
-        }
 
             #articles h3 {
                 color: #34ACA7;
@@ -145,7 +148,9 @@ nav {
                 color: #34ACA7;
             }
 
-
+hr {
+    margin: 5vw;
+}
 
 footer {
     display: flex;
