@@ -14,6 +14,11 @@ nav {
     display: flex;
 }
 
+    nav > img {
+        width: 120px;
+        height: 120px;
+    }
+
     #navigation {
         list-style-type: none;
         margin: 0;
@@ -27,6 +32,11 @@ nav {
             align-items: center;
             margin: 30px;
             font-size: 14px;
+        }
+
+        #navigation img {
+            height: 30px;
+            width: 30px;
         }
 
     #joins {
@@ -60,9 +70,14 @@ nav {
                 font-size: 10px;
             }
 
+            .join-btn img {
+                width: 16px;
+                height: 13px
+            }
+
 
     #banner{
-
+        width: 100%;
     }
 
         #up-div {
@@ -116,6 +131,8 @@ nav {
         }
 
             #mail img {
+                width: 32px;
+                height: 26px;
                 margin:  0 15px 0 0;
             }
 
@@ -124,8 +141,15 @@ nav {
             }
 
             #mail input {
+                font-size: 10px;
                 padding: 1px;
                 margin: 0 0 0 30px;
+            }
+
+            #mail #submit {
+                font-size: 10px;
+                width: 80px;
+                height: 23px;
             }
 
     #articles {
@@ -133,7 +157,6 @@ nav {
         display: flex;
         justify-content: space-between;
     }
-
 
             #articles h3 {
                 color: #34ACA7;
@@ -146,6 +169,13 @@ nav {
 
             #articles a {
                 color: #34ACA7;
+            }
+
+            #articles img {
+                display: block;
+                border: solid 1px;
+                padding: 2%;
+                width: 95%;
             }
 
 hr {
@@ -170,4 +200,18 @@ footer {
     footer p {
         color: #E5E5E5;
         font-size: 12px;
+    }
+    footer #tw{
+        width: 32px;
+        height: 26px
+    }
+
+    footer #fb {
+        width: 16px;
+        height: 32px
+    }
+
+    footer #rss {
+        width: 32px;
+        height: 32px
     }

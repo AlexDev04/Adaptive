@@ -1,4 +1,4 @@
-@media screen and (min-width: 992px) and (max-width: 1176px){
+@media screen and (min-width: 992px) and (max-width: 1176px) {
 
     main {
         justify-content: space-evenly;
@@ -61,7 +61,7 @@
 
 
 
-@media screen and (min-width: 768px) and (max-width: 992px){
+@media screen and (min-width: 768px) and (max-width: 992px) {
 
     main {
         flex-direction: column;
@@ -140,12 +140,7 @@
     }
 
     #articles article {
-        width: 159px;
+        width: 22%;
     }
-
-    article img {
-        width: 100%;
-    }
-
 
 }
