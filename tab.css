@@ -6,7 +6,7 @@
 
         nav {
             flex-direction: column;
-            width: 15%;
+            width: 150px;
             align-items: center;
         }
 
@@ -14,28 +14,22 @@
             width: 712px;
         }
 
-            #banner img {
-                z-index: -1;
+            #banner {
+                background-size: auto 100%;
+                height: 445px
             }
 
             #up-div {
-                display: flex;
-                transform: translateY(-120px);
-                margin-bottom: -49px;
                 font-size: 22px;
                 height: 49px;
                 padding: 0 10px;
                 width: fit-content;
-                z-index: 1;
             }
             #down-div {
-                display: flex;
-                transform: translateY(-71px);
-                margin-bottom: -46px;
                 height: 42px;
                 width: fit-content;
                 padding: 0 10px;
-                z-index: 1;
+                margin: 0 0 30px;
             }
 
             #slider-links p {
@@ -104,28 +98,21 @@
         width: 100%;
     }
 
-    #banner img {
-        z-index: -1;
+    #banner{
+        height: 445px;
     }
 
     #up-div {
-        display: flex;
-        transform: translateY(-120px);
-        margin-bottom: -49px;
         font-size: 22px;
         height: 49px;
         padding: 0 10px;
         width: fit-content;
-        z-index: 1;
     }
     #down-div {
-        display: flex;
-        transform: translateY(-71px);
-        margin-bottom: -46px;
         height: 42px;
         width: fit-content;
         padding: 0 10px;
-        z-index: 1;
+        margin: 0 0 30px;
     }
 
     #slider-links p {

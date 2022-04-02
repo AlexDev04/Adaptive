@@ -77,14 +77,23 @@ nav {
 
 
     #banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         width: 100%;
+        background-image: url("images/banner.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-style: italic;
     }
 
         #up-div {
+            display: flex;
             background-color: white;
             align-items: center;
         }
         #down-div {
+            display: flex;
             background-color: black;
             color: white;
             align-items: center;
@@ -203,15 +212,18 @@ footer {
     }
     footer #tw{
         width: 32px;
-        height: 26px
+        height: 26px;
+        margin: 3px;
     }
 
     footer #fb {
         width: 16px;
-        height: 32px
+        height: 32px;
+        margin: 3px;
     }
 
     footer #rss {
         width: 32px;
-        height: 32px
+        height: 32px;
+        margin: 3px;
     }
