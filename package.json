@@ -1,0 +1,30 @@
+{
+  "name": "adaptive",
+  "version": "1.0.0",
+  "description": "сайт на gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexDev04/Adaptive.git"
+  },
+  "author": "alexdev04",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexDev04/Adaptive/issues"
+  },
+  "homepage": "https://github.com/AlexDev04/Adaptive#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "latest"
+  },
+  "dependencies": {
+    "sass": "^1.49.10"
+  }
+}
