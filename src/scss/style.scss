@@ -143,10 +143,14 @@ $background-img: url("/images/banner.svg");
 
   &-mail {
     display: flex;
-    margin: 30px 0;
+    margin: 20px 0;
     font-size: 14px;
     align-items: center;
     justify-content: space-between;
+    padding 10px 0;
+    border-top: 1px dashed $light-gray;
+    border-bottom: 1px dashed $light-gray;
+
 
     > div {
       display: flex;
