@@ -22,7 +22,7 @@ const path = {
     },
     watch: {
         html: rootFolder + '/index.html',
-        css: rootFolder + '/scss/style.scss',
+        css: rootFolder + '/scss/*.scss',
         img: rootFolder + '/images'
     },
     //Путь для очистки выходной директории, чтобы туда не попадало лишнее

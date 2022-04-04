@@ -3,11 +3,6 @@
 //файл разбит на несколько частей и объединяет все в один css файл.
 
 
-@import "pc";
-@import "tab";
-@import "phone";
-
-
 //Цвета вынесены для того, чтобы можно было быстро изменить стиль страницы
 // (названия стоило давать осмысленные, но я не придумал)
 $sea-wave: #34ACA7;
@@ -174,7 +169,20 @@ $background-img: url("/images/banner.svg");
         margin: 0 0 0 30px;
       }
 
+      > #email {
+        color: $light-gray;
+        border-radius: 0;
+        border: solid 1px $light-gray;
+
+        ::placeholder{
+          color: $light-gray;
+        }
+      }
+
       > #submit {
+        background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%);
+        border: none;
+        border-radius: 2px;
         font-size: 10px;
         width: 80px;
         height: 23px;
@@ -203,8 +211,9 @@ $background-img: url("/images/banner.svg");
 
       > img {
         display: block;
-        border: solid 1px;
-        padding: 2%;
+        // outline чтобы не затрагивать рамкой расположение элементов
+        outline: solid 1px $light-gray;
+        outline-offset: 10px;
         width: 95%;
       }
     }
@@ -261,3 +270,10 @@ hr {
     }
   }
 }
+
+
+//Imports
+
+@import "pc";
+@import "tab";
+@import "phone";
