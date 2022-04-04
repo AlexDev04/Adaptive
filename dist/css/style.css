@@ -64,6 +64,7 @@
   justify-content: flex-end;
   width: 100%;
   background-image: url("/images/banner.svg");
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   font-style: italic;
