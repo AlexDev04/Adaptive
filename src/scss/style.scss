@@ -3,19 +3,7 @@
 //файл разбит на несколько частей и объединяет все в один css файл.
 
 
-//Цвета вынесены для того, чтобы можно было быстро изменить стиль страницы
-// (названия стоило давать осмысленные, но я не придумал)
-$sea-wave: #34ACA7;
-$white: white;
-$black: black;
-$light-gray: #E5E5E5;
-$unactive-link: #EFF8F7;
-$active-link: #D9EFEC;
-
-//Картинка вынесена для того, чтобы можно было быстро сменить баннер
-//(пригодится и для внедрения JS в проект)
-$background-img: url("/images/banner-4.svg");
-
+@import "var";
 
 * {
   font-family: Arial;
@@ -46,6 +34,7 @@ $background-img: url("/images/banner-4.svg");
         align-items: center;
         margin: 30px;
         font-size: 14px;
+        cursor: pointer;
       }
       > img {
         height: 30px;
@@ -75,6 +64,7 @@ $background-img: url("/images/banner-4.svg");
       border: solid 1px;
       border-radius: 5px;
       color: $sea-wave;
+      cursor: pointer;
 
 
       > p {
@@ -103,6 +93,12 @@ $background-img: url("/images/banner-4.svg");
     background-repeat: no-repeat;
     font-style: italic;
 
+    &-buttons {
+      display: none;
+      margin-bottom: 40px;
+      opacity: 0.7;
+    }
+
     &-up {
       display: flex;
       background-color: $white;
@@ -122,6 +118,7 @@ $background-img: url("/images/banner-4.svg");
     justify-content: center;
     color: $sea-wave;
     width: 100%;
+    cursor: pointer;
 
     > div {
       background-color: $unactive-link;
@@ -187,6 +184,7 @@ $background-img: url("/images/banner-4.svg");
         font-size: 10px;
         width: 80px;
         height: 23px;
+        cursor: pointer;
       }
     }
   }
@@ -208,6 +206,7 @@ $background-img: url("/images/banner-4.svg");
 
       > a {
         color: $sea-wave;
+        cursor: pointer;
       }
 
       > img {
@@ -235,6 +234,7 @@ hr {
     a {
       color: $sea-wave;
       font-size: 12px;
+      cursor: pointer;
     }
 
     span {
@@ -256,18 +256,21 @@ hr {
       width: 32px;
       height: 26px;
       margin: 3px;
+      cursor: pointer;
     }
 
     #fb {
       width: 16px;
       height: 32px;
       margin: 3px;
+      cursor: pointer;
     }
 
     #rss {
       width: 32px;
       height: 32px;
       margin: 3px;
+      cursor: pointer;
     }
   }
 }

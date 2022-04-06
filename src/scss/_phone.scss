@@ -1,3 +1,5 @@
+@import "var";
+
 // max 480px  || min 480px max 768px
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -54,6 +56,28 @@
 
     &-banner {
       height: 353px;
+
+      &-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        :first-child {
+          margin: 20px;
+          padding: 20px;
+          border-radius: 5px;
+          background-color: $light-gray;
+          cursor: pointer;
+        }
+
+        :last-child {
+          margin: 20px;
+          padding: 20px;
+          border-radius: 5px;
+          background-color: $light-gray;
+          cursor: pointer;
+        }
+      }
 
       &-up {
         width: 100%;
@@ -164,10 +188,30 @@
       background-size: auto 373px;
       height: 373px;
 
+      &-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        :first-child {
+          margin: 20px;
+          padding: 5px;
+          border-radius: 5px;
+          background-color: $light-gray;
+          cursor: pointer;
+        }
+
+        :last-child {
+          margin: 20px;
+          padding: 5px;
+          border-radius: 5px;
+          background-color: $light-gray;
+          cursor: pointer;
+        }
+      }
+
       &-up {
         width: 100%;
-        transform: translateY(-95px);
-        margin-bottom: -49px;
         font-size: 22px;
         height: 49px;
         padding: 0;
@@ -177,8 +221,6 @@
 
       &-down {
         width: 100%;
-        transform: translateY(-46px);
-        margin-bottom: -46px;
         height: 42px;
         padding: 0;
         z-index: 1;

@@ -1,8 +1,14 @@
 const banner = document.getElementsByClassName('page-banner')[0];
 console.log(banner);
+
 const buttonsNode = document.querySelectorAll('.page-slinks div');
 const buttons = Array.prototype.slice.call(buttonsNode);
 console.log(buttons);
+
+const buttonL = document.getElementById('buttonL');
+const buttonR = document.getElementById('buttonR');
+console.log(buttonL + ' ' + buttonR);
+
 
 
 const slides = [ '/images/banner.png', '/images/banner-2.png', '/images/banner-3.png', '/images/banner-4.svg' ];
@@ -20,7 +26,7 @@ function increment () {
 }
 function decrement () {
     curSlide -= 1;
-    if (curSlide < slides.length) {
+    if (curSlide < 0) {
         curSlide = slides.length -1;
     }
     return curSlide;
@@ -30,9 +36,6 @@ function chain (curSlide) {
     console.log(curSlide);
     banner.style.backgroundImage = `url("${slides[curSlide]}")`;
     console.log(banner.style.backgroundImage);
-    // for(let i = 0; i < buttons.length; i++) {
-    //     buttons[i].classList.remove('active')
-    // }
     buttons.forEach((el) => el.classList.remove('active'));
     buttons[curSlide].classList.add('active');
     return slides[curSlide];
@@ -51,6 +54,22 @@ buttons.forEach((el) => {
             chain(increment());
         }, 10000)
     })
+})
+
+buttonL.addEventListener('click', () => {
+    chain(decrement());
+    clearInterval(intervalSelf);
+    intervalSelf = setInterval(function() {
+        chain(increment());
+    }, 10000)
+})
+
+buttonR.addEventListener('click', () => {
+    chain(increment());
+    clearInterval(intervalSelf);
+    intervalSelf = setInterval(function() {
+        chain(increment());
+    }, 10000)
 })
 
 

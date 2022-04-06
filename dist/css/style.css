@@ -25,6 +25,7 @@
   align-items: center;
   margin: 30px;
   font-size: 14px;
+  cursor: pointer;
 }
 .nav-navigation-ul > img {
   height: 30px;
@@ -48,6 +49,7 @@
   border: solid 1px;
   border-radius: 5px;
   color: #34ACA7;
+  cursor: pointer;
 }
 .nav-joins-btn > p {
   margin: 0;
@@ -69,6 +71,11 @@
   background-repeat: no-repeat;
   font-style: italic;
 }
+.page-banner-buttons {
+  display: none;
+  margin-bottom: 40px;
+  opacity: 0.7;
+}
 .page-banner-up {
   display: flex;
   background-color: white;
@@ -85,6 +92,7 @@
   justify-content: center;
   color: #34ACA7;
   width: 100%;
+  cursor: pointer;
 }
 .page-slinks > div {
   background-color: #EFF8F7;
@@ -140,6 +148,7 @@
   font-size: 10px;
   width: 80px;
   height: 23px;
+  cursor: pointer;
 }
 .page-articles {
   width: 100%;
@@ -155,6 +164,7 @@
 }
 .page-articles-article > a {
   color: #34ACA7;
+  cursor: pointer;
 }
 .page-articles-article > img {
   display: block;
@@ -175,6 +185,7 @@ hr {
 .footer-left a {
   color: #34ACA7;
   font-size: 12px;
+  cursor: pointer;
 }
 .footer-left span {
   display: inline-block;
@@ -190,16 +201,19 @@ hr {
   width: 32px;
   height: 26px;
   margin: 3px;
+  cursor: pointer;
 }
 .footer-right #fb {
   width: 16px;
   height: 32px;
   margin: 3px;
+  cursor: pointer;
 }
 .footer-right #rss {
   width: 32px;
   height: 32px;
   margin: 3px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1176px) {
@@ -397,6 +411,25 @@ hr {
   .page-banner {
     height: 353px;
   }
+  .page-banner-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .page-banner-buttons :first-child {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #E5E5E5;
+    cursor: pointer;
+  }
+  .page-banner-buttons :last-child {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #E5E5E5;
+    cursor: pointer;
+  }
   .page-banner-up {
     width: 100%;
     font-size: 22px;
@@ -486,10 +519,27 @@ hr {
     background-size: auto 373px;
     height: 373px;
   }
+  .page-banner-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .page-banner-buttons :first-child {
+    margin: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #E5E5E5;
+    cursor: pointer;
+  }
+  .page-banner-buttons :last-child {
+    margin: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #E5E5E5;
+    cursor: pointer;
+  }
   .page-banner-up {
     width: 100%;
-    transform: translateY(-95px);
-    margin-bottom: -49px;
     font-size: 22px;
     height: 49px;
     padding: 0;
@@ -498,8 +548,6 @@ hr {
   }
   .page-banner-down {
     width: 100%;
-    transform: translateY(-46px);
-    margin-bottom: -46px;
     height: 42px;
     padding: 0;
     z-index: 1;
