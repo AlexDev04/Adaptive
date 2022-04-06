@@ -1,6 +1,7 @@
 const banner = document.getElementsByClassName('page-banner')[0];
 console.log(banner);
-const buttons = document.querySelectorAll('.page-slinks div');
+const buttonsNode = document.querySelectorAll('.page-slinks div');
+const buttons = Array.prototype.slice.call(buttonsNode);
 console.log(buttons);
 
 
@@ -29,9 +30,10 @@ function chain (curSlide) {
     console.log(curSlide);
     banner.style.backgroundImage = `url("${slides[curSlide]}")`;
     console.log(banner.style.backgroundImage);
-    for(let i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove('active')
-    }
+    // for(let i = 0; i < buttons.length; i++) {
+    //     buttons[i].classList.remove('active')
+    // }
+    buttons.forEach((el) => el.classList.remove('active'));
     buttons[curSlide].classList.add('active');
     return slides[curSlide];
 }
@@ -39,4 +41,13 @@ function chain (curSlide) {
 const intervalId = setInterval(function() {
     chain(increment());
 }, 15000)
+
+buttons.forEach((el) => {
+    el.addEventListener('click', () => {
+        curSlide = buttons.indexOf(el);
+        chain(curSlide);
+    })
+})
+
+
 
