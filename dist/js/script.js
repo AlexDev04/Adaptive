@@ -38,14 +38,18 @@ function chain (curSlide) {
     return slides[curSlide];
 }
 
-const intervalId = setInterval(function() {
+let intervalSelf = setInterval(function() {
     chain(increment());
-}, 15000)
+}, 10000)
 
 buttons.forEach((el) => {
     el.addEventListener('click', () => {
         curSlide = buttons.indexOf(el);
         chain(curSlide);
+        clearInterval(intervalSelf);
+        intervalSelf = setInterval(function() {
+            chain(increment());
+        }, 10000)
     })
 })
 
