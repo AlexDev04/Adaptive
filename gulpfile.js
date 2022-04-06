@@ -13,17 +13,20 @@ const path = {
     build: {
         html: projectFolder + '/',
         css: projectFolder + '/css',
-        img: projectFolder + '/images'
+        img: projectFolder + '/images',
+        js: projectFolder + '/js'
     },
     src: {
         html: rootFolder + '/*.html',
         css: rootFolder + '/scss/style.scss',
-        img: rootFolder + '/images/*'
+        img: rootFolder + '/images/*',
+        js: rootFolder + '/js/*.js'
     },
     watch: {
         html: rootFolder + '/index.html',
         css: rootFolder + '/scss/*.scss',
-        img: rootFolder + '/images'
+        img: rootFolder + '/images',
+        js: rootFolder + '/js/*.js'
     },
     //Путь для очистки выходной директории, чтобы туда не попадало лишнее
     clean: './' + projectFolder + '/'
@@ -52,7 +55,8 @@ function browserSync(params) {
 function watchFiles(params) {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
-    gulp.watch([path.watch.img], images)
+    gulp.watch([path.watch.img], images);
+    gulp.watch([path.watch.js], js)
 }
 
 //Функция очистки (через плагин del)
@@ -78,6 +82,11 @@ function css() {
         .pipe(dest(path.build.css))
         .pipe(browsersync.stream())
 }
+function js() {
+    return src(path.src.js)
+        .pipe(dest(path.build.js))
+        .pipe(browsersync.stream())
+}
 
 //Переносим все изображения в dist
 function images() {
@@ -88,10 +97,11 @@ function images() {
 
 //Пишем очередность выполнения сценариев - сначала очистка, потом одновременный
 //перенос html, css, img
-let build = gulp.series(clean, gulp.parallel(html, css, images));
+let build = gulp.series(clean, gulp.parallel(html, css, images, js));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 //т.к. gulp.task не использовался, необходимо явно указать gulp на функции сценария
+exports.js = js;
 exports.images = images;
 exports.css = css;
 exports.html = html;
