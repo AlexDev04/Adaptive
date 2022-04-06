@@ -1,21 +1,19 @@
 const banner = document.getElementsByClassName('page-banner')[0];
-console.log(banner);
 
 const buttonsNode = document.querySelectorAll('.page-slinks div');
 const buttons = Array.prototype.slice.call(buttonsNode);
-console.log(buttons);
+
 
 const buttonL = document.getElementById('buttonL');
 const buttonR = document.getElementById('buttonR');
-console.log(buttonL + ' ' + buttonR);
+
 
 
 
 const slides = [ '/images/banner.png', '/images/banner-2.png', '/images/banner-3.png', '/images/banner-4.svg' ];
 
 let curSlide = 3;
-console.log(curSlide);
-console.log(slides[curSlide]);
+
 
 function increment () {
     curSlide += 1;
@@ -33,12 +31,9 @@ function decrement () {
 }
 
 function chain (curSlide) {
-    console.log(curSlide);
     banner.style.backgroundImage = `url("${slides[curSlide]}")`;
-    console.log(banner.style.backgroundImage);
     buttons.forEach((el) => el.classList.remove('active'));
     buttons[curSlide].classList.add('active');
-    return slides[curSlide];
 }
 
 let intervalSelf = setInterval(function() {
