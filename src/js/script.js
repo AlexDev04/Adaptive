@@ -47,7 +47,7 @@ let intervalSelf = setInterval(function() {
 
 buttons.forEach((el) => {
     el.addEventListener('click', () => {
-        curSlide = buttons.indexOf(el);
+        curSlide = el.dataset.num;
         chain(curSlide);
         clearInterval(intervalSelf);
         intervalSelf = setInterval(function() {
