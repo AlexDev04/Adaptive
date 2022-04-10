@@ -10,7 +10,7 @@ const buttonR = document.getElementById('buttonR');
 
 
 
-const slides = [ '/images/banner.png', '/images/banner-2.png', '/images/banner-3.png', '/images/banner-4.svg' ];
+const slides = [ '/images/banner.webp', '/images/banner-2.webp', '/images/banner-3.webp', '/images/banner-4.webp' ];
 
 let curSlide = 3;
 
@@ -42,7 +42,7 @@ let intervalSelf = setInterval(function() {
 
 buttons.forEach((el) => {
     el.addEventListener('click', () => {
-        curSlide = buttons.indexOf(el);
+        curSlide = el.dataset.num;
         chain(curSlide);
         clearInterval(intervalSelf);
         intervalSelf = setInterval(function() {
