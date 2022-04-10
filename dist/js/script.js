@@ -11,7 +11,7 @@ console.log(buttonL + ' ' + buttonR);
 
 
 
-const slides = [ '/images/banner.png', '/images/banner-2.png', '/images/banner-3.png', '/images/banner-4.svg' ];
+const slides = [ '/images/banner.webp', '/images/banner-2.webp', '/images/banner-3.webp', '/images/banner-4.webp' ];
 
 let curSlide = 3;
 console.log(curSlide);
