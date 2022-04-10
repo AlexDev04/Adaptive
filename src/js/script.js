@@ -13,6 +13,7 @@ const buttonR = document.getElementById('buttonR');
 const slides = [ '/images/banner.webp', '/images/banner-2.webp', '/images/banner-3.webp', '/images/banner-4.webp' ];
 
 let curSlide = 3;
+chain(curSlide);
 
 
 function increment () {
